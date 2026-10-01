@@ -1,0 +1,14 @@
+<div class="fundo-esqueci">
+  <div class="caixa-esqueci">
+    <h3>Informe o seu email</h3>
+    <form [formGroup]="form" (ngSubmit)="enviar()">
+      <div class="mb-3">
+        <input type="email" class="form-control" formControlName="email" placeholder="seuemail@exemplo.com">
+        @if (form.get('email')?.invalid && form.get('email')?.touched) {
+          <small class="erro-campo">Informe um email válido.</small>
+        }
+      </div>
+      <button type="submit" class="btn-ok">OK</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.barra-filtros {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background-color: var(--cor-bege);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filtro-item label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-preto);
+}
+
+.filtro-item select {
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: white;
+  color: var(--cor-preto);
+}
+
+@media (max-width: 576px) {
+  .barra-filtros {
+    flex-direction: column;
+  }
+}

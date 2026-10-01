@@ -1,0 +1,66 @@
+<main class="login-page">
+  <div class="container login-container">
+    <section class="painel-login" aria-labelledby="titulo-login">
+      <div class="coluna-login">
+        <p class="eyebrow">VINILSHOP</p>
+        <h1 id="titulo-login">Bem-vindo de volta</h1>
+        <p class="descricao-login">Entre para continuar descobrindo os discos que fazem sua coleção girar.</p>
+
+        <form [formGroup]="form" (ngSubmit)="entrar()" novalidate>
+          @if (erroLogin) {
+            <p class="erro-login" role="alert">Email ou senha incorretos.</p>
+          }
+
+          <div class="campo-formulario">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              class="form-control"
+              formControlName="email"
+              autocomplete="email"
+              placeholder="voce@email.com"
+              [attr.aria-invalid]="form.controls.email.invalid && form.controls.email.touched"
+              aria-describedby="email-erro">
+            @if (form.controls.email.touched && form.controls.email.hasError('required')) {
+              <small id="email-erro" class="erro-campo">Informe seu email.</small>
+            } @else if (form.controls.email.touched && form.controls.email.hasError('email')) {
+              <small id="email-erro" class="erro-campo">Informe um email válido.</small>
+            }
+          </div>
+
+          <div class="campo-formulario">
+            <label for="senha">Senha</label>
+            <input
+              id="senha"
+              type="password"
+              class="form-control"
+              formControlName="senha"
+              autocomplete="current-password"
+              placeholder="Digite sua senha"
+              [attr.aria-invalid]="form.controls.senha.invalid && form.controls.senha.touched"
+              aria-describedby="senha-erro">
+            @if (form.controls.senha.touched && form.controls.senha.hasError('required')) {
+              <small id="senha-erro" class="erro-campo">Informe sua senha.</small>
+            } @else if (form.controls.senha.touched && form.controls.senha.hasError('minlength')) {
+              <small id="senha-erro" class="erro-campo">A senha deve ter pelo menos 6 caracteres.</small>
+            }
+          </div>
+
+          <div class="acoes-login">
+            <button type="submit" class="btn-entrar">Entrar</button>
+            <a routerLink="/esqueci-senha" class="link-esqueci">Esqueci minha senha</a>
+          </div>
+        </form>
+      </div>
+
+      <aside class="coluna-cadastro" aria-labelledby="titulo-cadastro">
+        <span class="icone-disco" aria-hidden="true"><i class="bi bi-vinyl-fill"></i></span>
+        <p class="eyebrow">PRIMEIRA VEZ AQUI?</p>
+        <h2 id="titulo-cadastro">Monte sua coleção</h2>
+        <p>Crie sua conta e encontre novos clássicos para ouvir em qualquer lado.</p>
+        <a routerLink="/cadastro" class="btn-clique-aqui">Criar cadastro</a>
+      </aside>
+    </section>
+  </div>
+</main>

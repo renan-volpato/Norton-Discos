@@ -1,0 +1,39 @@
+<div class="container py-4">
+  <h2 class="titulo-cesta">Cesta</h2>
+
+  @if ((itens$ | async)?.length) {
+    <table class="tabela-cesta">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qtd</th>
+          <th>Valor</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of (itens$ | async); track item.produto.id) {
+          <tr>
+            <td>{{ item.produto.nome }}</td>
+            <td>{{ item.quantidade }}x</td>
+            <td>R$ {{ (item.produto.preco * item.quantidade).toFixed(2) }}</td>
+            <td><button class="btn-remover" (click)="remover(item.produto.id)">Remover</button></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <div class="total-cesta">
+      <span>Total</span>
+      <span>R$ {{ (total$ | async)?.toFixed(2) }}</span>
+    </div>
+
+    <div class="botoes-cesta">
+      <a routerLink="/" class="btn-continuar">Continuar Comprando</a>
+      <button class="btn-limpar" (click)="limparCesta()">Limpar Cesta</button>
+      <button class="btn-finalizar" (click)="finalizar()">Finalizar</button>
+    </div>
+  } @else {
+    <p class="cesta-vazia">Sua cesta está vazia. <a routerLink="/">Voltar para a loja</a></p>
+  }
+</div>

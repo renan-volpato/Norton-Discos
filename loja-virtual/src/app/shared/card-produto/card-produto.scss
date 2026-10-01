@@ -1,0 +1,71 @@
+.card-produto {
+  background-color: var(--cor-bege);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-produto:hover {
+  transform: translateY(-4px);
+}
+
+.foto-produto {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.info-produto {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-grow: 1;
+}
+
+.nome-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nome-produto {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--cor-preto);
+}
+
+.artista-produto {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  margin: 0 0 0.5rem 0;
+}
+
+.rodape-card {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preco-produto {
+  font-weight: 700;
+  color: var(--cor-vermelho);
+}
+
+.btn-comprar {
+  background-color: var(--cor-vermelho);
+  color: var(--cor-bege);
+  border: none;
+  padding: 0.35rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-comprar:hover {
+  filter: brightness(1.2);
+}

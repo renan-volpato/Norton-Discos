@@ -1,0 +1,34 @@
+<div class="barra-filtros">
+  <div class="filtro-item">
+    <label>Época</label>
+    <select [(ngModel)]="decada" (ngModelChange)="emitirFiltro()">
+      <option value="todas">Todas</option>
+      <option value="1960">Anos 60</option>
+      <option value="1970">Anos 70</option>
+      <option value="1980">Anos 80</option>
+      <option value="1990">Anos 90</option>
+      <option value="2000">Anos 2000</option>
+      <option value="2010">Anos 2010</option>
+      <option value="2020">Anos 2020</option>
+    </select>
+  </div>
+
+  <div class="filtro-item">
+    <label>Preço</label>
+    <select [(ngModel)]="faixaPreco" (ngModelChange)="emitirFiltro()">
+      <option value="todas">Todas</option>
+      <option value="ate100">Até R$ 100</option>
+      <option value="100a150">R$ 100 a R$ 150</option>
+      <option value="acima150">Acima de R$ 150</option>
+    </select>
+  </div>
+
+  <div class="filtro-item">
+    <label>Região</label>
+    <select [(ngModel)]="regiao" (ngModelChange)="emitirFiltro()">
+      <option value="todas">Todas</option>
+      <option value="Nacional">Nacional</option>
+      <option value="Internacional">Internacional</option>
+    </select>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.fundo-esqueci {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--cor-preto),
+    var(--cor-preto) 2px,
+    var(--cor-fundo) 2px,
+    var(--cor-fundo) 20px
+  );
+}
+
+.caixa-esqueci {
+  background-color: var(--cor-bege);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-vermelho);
+  margin-bottom: 1.5rem;
+}
+
+.erro-campo {
+  color: var(--cor-vermelho);
+}
+
+.btn-ok {
+  background-color: var(--cor-vermelho);
+  color: var(--cor-bege);
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-ok:hover {
+  filter: brightness(1.2);
+}

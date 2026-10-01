@@ -1,0 +1,15 @@
+:root {
+  --cor-fundo: #f2e8d5;       /* bege claro, fundo geral */
+  --cor-bege: #e6d5b8;        /* bege um pouco mais escuro, pra cards/seções */
+  --cor-vermelho: #5c0a0a;    /* vermelho bem escuro, cor de destaque */
+  --cor-preto: #1a1a1a;       /* preto, terciária (textos, navbar, rodapé) */
+  --cor-texto-claro: #f2e8d5; /* texto sobre fundo escuro */
+  --fonte-titulo: 'Bebas Neue', sans-serif;
+  --fonte-texto: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-preto);
+  font-family: var(--fonte-texto);
+}

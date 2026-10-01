@@ -1,0 +1,32 @@
+.painel-cadastro {
+  background-color: var(--cor-bege);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-vermelho);
+  margin-bottom: 1.5rem;
+}
+
+.erro-campo {
+  color: var(--cor-vermelho);
+}
+
+.btn-cadastrar {
+  background-color: var(--cor-vermelho);
+  color: var(--cor-bege);
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn-cadastrar:hover {
+  filter: brightness(1.2);
+}

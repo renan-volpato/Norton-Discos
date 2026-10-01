@@ -1,0 +1,42 @@
+@if (produto(); as p) {
+  <div class="container py-4">
+    <div class="row detalhe-produto">
+      <div class="col-md-5">
+        <img [src]="p.imagem" [alt]="p.nome" class="foto-detalhe">
+      </div>
+      <div class="col-md-7">
+        <h2 class="nome-detalhe">{{ p.nome }}</h2>
+        <p class="artista-detalhe">{{ p.artista }}</p>
+        <p class="descricao-detalhe">{{ p.descricao }}</p>
+        <p class="preco-detalhe">R$ {{ p.preco.toFixed(2) }}</p>
+        <button class="btn-comprar-detalhe" (click)="comprar()">Comprar</button>
+
+        @if (p.faixas?.length) {
+          <div class="tracklist">
+            <h4>Faixas</h4>
+            <ol>
+              @for (faixa of p.faixas; track faixa) {
+                <li>{{ faixa }}</li>
+              }
+            </ol>
+          </div>
+        }
+      </div>
+    </div>
+
+    @if (relacionados().length) {
+      <div class="relacionados">
+        <h3>Você também pode gostar</h3>
+        <div class="grid-relacionados">
+          @for (rel of relacionados(); track rel.id) {
+            <app-card-produto [produto]="rel"></app-card-produto>
+          }
+        </div>
+      </div>
+    }
+  </div>
+} @else {
+  <div class="container py-4">
+    <p>Produto não encontrado.</p>
+  </div>
+}

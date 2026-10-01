@@ -1,0 +1,13 @@
+<div class="container py-4">
+  <h2 class="titulo-busca">Pesquisa por: {{ termo() || '...' }}</h2>
+
+  @if (produtos().length) {
+    <div class="grid-produtos">
+      @for (produto of produtos(); track produto.id) {
+        <app-card-produto [produto]="produto"></app-card-produto>
+      }
+    </div>
+  } @else {
+    <p class="sem-resultado">Nenhum disco encontrado para "{{ termo() }}".</p>
+  }
+</div>

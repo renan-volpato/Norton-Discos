@@ -1,0 +1,100 @@
+.titulo-cesta {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-vermelho);
+  margin-bottom: 1.5rem;
+}
+
+.tabela-cesta {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--cor-bege);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabela-cesta th, .tabela-cesta td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.tabela-cesta th {
+  color: var(--cor-preto);
+  font-weight: 700;
+}
+
+.btn-remover {
+  background: none;
+  border: none;
+  color: var(--cor-vermelho);
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.total-cesta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cor-preto);
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.botoes-cesta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-limpar {
+  background: none;
+  border: 2px solid var(--cor-vermelho);
+  color: var(--cor-vermelho);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-finalizar {
+  background-color: var(--cor-vermelho);
+  color: var(--cor-bege);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-finalizar:hover, .btn-limpar:hover {
+  filter: brightness(1.2);
+}
+
+.cesta-vazia {
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 1.1rem;
+}
+
+.cesta-vazia a {
+  color: var(--cor-vermelho);
+  font-weight: 600;
+}
+
+.btn-continuar {
+  background: none;
+  border: 2px solid var(--cor-preto);
+  color: var(--cor-preto);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-continuar:hover {
+  background-color: var(--cor-preto);
+  color: var(--cor-bege);
+}

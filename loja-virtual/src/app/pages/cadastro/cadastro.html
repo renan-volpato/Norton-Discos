@@ -1,0 +1,57 @@
+<div class="container py-4">
+  <div class="painel-cadastro">
+    <h3>Cadastro</h3>
+    <form [formGroup]="form" (ngSubmit)="cadastrar()">
+      <div class="mb-3">
+        <label>Nome</label>
+        <input type="text" class="form-control" formControlName="nome">
+        @if (form.get('nome')?.invalid && form.get('nome')?.touched) {
+          <small class="erro-campo">Informe seu nome completo (mín. 3 letras).</small>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" formControlName="email">
+        @if (form.get('email')?.invalid && form.get('email')?.touched) {
+          <small class="erro-campo">Informe um email válido.</small>
+        }
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label>Senha</label>
+          <input type="password" class="form-control" formControlName="senha">
+          @if (form.get('senha')?.invalid && form.get('senha')?.touched) {
+            <small class="erro-campo">Mínimo de 6 caracteres.</small>
+          }
+        </div>
+        <div class="col-md-6 mb-3">
+          <label>Confirma Senha</label>
+          <input type="password" class="form-control" formControlName="confirmaSenha">
+          @if (form.errors?.['senhasDiferentes'] && form.get('confirmaSenha')?.touched) {
+            <small class="erro-campo">As senhas não coincidem.</small>
+          }
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>CPF</label>
+        <input type="text" class="form-control" formControlName="cpf" placeholder="Somente números">
+        @if (form.get('cpf')?.invalid && form.get('cpf')?.touched) {
+          <small class="erro-campo">CPF inválido.</small>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label>Telefone</label>
+        <input type="text" class="form-control" formControlName="telefone" placeholder="DDD + número">
+        @if (form.get('telefone')?.invalid && form.get('telefone')?.touched) {
+          <small class="erro-campo">Informe um telefone válido (10 ou 11 dígitos).</small>
+        }
+      </div>
+
+      <button type="submit" class="btn-cadastrar">Cadastrar</button>
+    </form>
+  </div>
+</div>

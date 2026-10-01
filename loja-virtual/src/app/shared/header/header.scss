@@ -1,0 +1,31 @@
+.navbar {
+  background-color: var(--cor-preto);
+}
+.btn-buscar {
+  background-color: var(--cor-vermelho);
+  color: var(--cor-bege);
+  border: none;
+}
+
+.btn-buscar:hover {
+  background-color: #4a0808;
+  color: white;
+}
+
+.icone-usuario,
+.icone-carrinho {
+  color: var(--cor-bege);
+  font-size: 1.9rem;
+  text-decoration: none;
+}
+
+.icone-usuario:hover,
+.icone-carrinho:hover {
+  color: var(--cor-vermelho);
+  filter: brightness(1.6);
+}
+
+.logo-imagem {
+  height: 75px;
+  width: auto;
+}

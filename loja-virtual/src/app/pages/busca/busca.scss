@@ -1,0 +1,30 @@
+.titulo-busca {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-vermelho);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-produtos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sem-resultado {
+  text-align: center;
+  padding: 2rem 0;
+  color: #6b6b6b;
+}

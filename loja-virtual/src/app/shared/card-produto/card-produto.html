@@ -1,0 +1,15 @@
+<div class="card-produto">
+  <a [routerLink]="['/produto', produto.id]" class="link-foto">
+    <img [src]="produto.imagem" [alt]="produto.nome" class="foto-produto">
+  </a>
+  <div class="info-produto">
+    <a [routerLink]="['/produto', produto.id]" class="nome-link">
+      <h3 class="nome-produto">{{ produto.nome }}</h3>
+    </a>
+    <p class="artista-produto">{{ produto.artista }}</p>
+    <div class="rodape-card">
+      <span class="preco-produto">R$ {{ produto.preco.toFixed(2) }}</span>
+      <button class="btn-comprar" (click)="comprar()">Comprar</button>
+    </div>
+  </div>
+</div>

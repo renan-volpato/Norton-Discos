@@ -1,0 +1,108 @@
+.detalhe-produto {
+  background-color: var(--cor-bege);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.foto-detalhe {
+  width: 100%;
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.nome-detalhe {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-preto);
+  margin-bottom: 0.25rem;
+}
+
+.artista-detalhe {
+  color: #6b6b6b;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.descricao-detalhe {
+  margin-bottom: 1.5rem;
+}
+
+.preco-detalhe {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-vermelho);
+}
+
+.btn-comprar-detalhe {
+  background-color: var(--cor-vermelho);
+  color: var(--cor-bege);
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-comprar-detalhe:hover {
+  filter: brightness(1.2);
+}
+
+.tracklist {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.tracklist h4 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-vermelho);
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.tracklist ol {
+  columns: 2;
+  column-gap: 2rem;
+  padding-left: 1.2rem;
+}
+
+.tracklist li {
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 576px) {
+  .tracklist ol {
+    columns: 1;
+  }
+}
+
+.relacionados {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.relacionados h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-vermelho);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.grid-relacionados {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .grid-relacionados {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-relacionados {
+    grid-template-columns: 1fr;
+  }
+}

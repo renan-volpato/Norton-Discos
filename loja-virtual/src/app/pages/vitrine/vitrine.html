@@ -1,0 +1,13 @@
+<div class="container py-4">
+  <h2 class="titulo-secao">Destaques</h2>
+
+  <app-filtro-barra (filtroChange)="onFiltroChange($event)"></app-filtro-barra>
+
+  <div class="grid-produtos">
+    @for (produto of produtosFiltrados(); track produto.id) {
+      <app-card-produto [produto]="produto"></app-card-produto>
+    } @empty {
+      <p class="sem-resultado">Nenhum disco encontrado com esses filtros.</p>
+    }
+  </div>
+</div>
